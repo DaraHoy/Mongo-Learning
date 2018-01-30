@@ -1,27 +1,15 @@
-/*global db*/
-//Create a function that accepts the 4 attributes plus a 5th variable called db. This variable would reference the mongodb like in the shell. 
-function createPokemon (name, health, lastFought, attacks, stats, db){
-    var newPokemon = {}
-    newPokemon.name = name;
-    newPokemon.health = health;
-    newPokemon.lastFought = lastFought;
-    newPokemon.attacks = attacks;
-    newPokemon.stats = stats;
-    newPokemon.db = db;
-    return newPokemon;
-};
-
-//Write the javascript code that would insert the four attributes into the “monster” collection as a new document.
-db.pokemons.insert(createPokemon('Charizard', 100, new Date(), ['Flamethrower', 'Hyper Beam'], {"attack": 150, "defense": 89}, 'pokemons'))
-
-//Write the code that would then console.log all the documents inside the collection.
-db.pokemons.find()
-
-//Write the command that will find your monster based on a name
-db.pokemons.find({"name": "Charizard"})
-
-//Write the command that will find a monster based on one of the attacks it has (if possible use a command that will return more than one monster with the same attack type)
-db.pokemons.find({"attacks": "Flamethrower"})
-
-//Write the command that will find a monster based on their defense stat.
-db.pokemons.find({"stats.defense": 89})
+var mongo = function(db){
+    //Write the command that will find all monsters with an attack lower than 10
+    
+    //Write the command that will find all monsters with a level above 5 but below 15 inclusive
+    
+    //Write the command to find monsters that do not have the “bite” attack.
+    
+    //Write the command to find monsters with levels less than 6 but only return the name, level and health attributes
+    
+    //Write the command to find all monsters who attack is between 10 and 20 but do not include the monsters health or style
+    
+    //Write the command to find out how many monsters are in the collection.
+    
+    //Write the command to sort the collection by the monsters level with the highest level at the top and the lowest at the bottom
+}
