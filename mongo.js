@@ -1,6 +1,24 @@
+//It’s recommended to create this database but is not needed. For this item assume the database will have the monster collection. Assume a document will have the following data schema:
+
+var exampleSchema = {
+	"name": "Bat",
+	"Level": 4,
+	"health": 25,
+	"type": "Flying",
+	"attacks": ["scratch", "bite"],
+	"stats": {
+		"attack": 5,
+		"defense": 2
+	},
+	"style": "cool"
+}
+
 var mongo = function(db){
     //Write the command that will find all monsters with an attack lower than 10
-    
+    db.monsters.find(
+        {},
+        {"stats.attack"}
+        )
     //Write the command that will find all monsters with a level above 5 but below 15 inclusive
     
     //Write the command to find monsters that do not have the “bite” attack.

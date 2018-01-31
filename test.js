@@ -31,13 +31,3 @@ db.pokemons.insert([{
     }
 }])
 
-function createPokemon (name, health, lastFought, attacks, stats, db){
-    var newPokemon = {}
-    newPokemon.name = name;
-    newPokemon.health = health;
-    newPokemon.lastFought = lastFought;
-    newPokemon.attacks = [];
-    newPokemon.stats = {};
-    newPokemon.db = db;
-    return newPokemon;
-};
